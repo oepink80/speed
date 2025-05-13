@@ -38,6 +38,7 @@ const TodoItem = memo(
   },
 );
 
+
 function App(): JSX.Element {
   const [todos, setTodos] = useState<Todo[]>([
     { id: 1, text: 'Learn React', completed: false },
@@ -52,6 +53,7 @@ function App(): JSX.Element {
       ),
     );
   }, []);
+
 
   const addTodo = useCallback(() => {
     if (!input.trim()) return; // Проверяем пустоту строки
